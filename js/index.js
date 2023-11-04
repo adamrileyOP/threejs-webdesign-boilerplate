@@ -27,6 +27,10 @@ window.addEventListener('load', function () {
     /* controls = new THREE.FirstPersonControls(camera, renderer.domElement);
     controls.movementSpeed = 0.1;
     controls.lookSpeed = 0.0005; */
+    // Add hemisphere light
+    const hemisphereLight = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
+    scene.add(hemisphereLight);
+
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(0, 1, 0);
     directionalLight.castShadow = true;
